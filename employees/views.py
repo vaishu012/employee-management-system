@@ -8,7 +8,7 @@ import openpyxl
 from reportlab.pdfgen import canvas
 from django.core.paginator import Paginator
 
-@login_required
+
 def home(request):
     search = request.GET.get("search")
 
