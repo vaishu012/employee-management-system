@@ -35,7 +35,7 @@ def home(request):
          "hr_count": hr_count,
     })
 
-@login_required
+
 def add_employee(request):
     if request.method == "POST":
         form = EmployeeForm(request.POST, request.FILES)
@@ -60,7 +60,7 @@ def edit_employee(request, id):
 
     return render(request, "add_employee.html", {"form": form})
 
-@login_required
+
 def delete_employee(request, id):
     employee = Employee.objects.get(id=id)
     employee.delete()
