@@ -7,6 +7,11 @@ from django.http import HttpResponse
 import openpyxl
 from reportlab.pdfgen import canvas
 from django.core.paginator import Paginator
+from django.contrib.auth import logout
+
+def logout_user(request):
+    logout(request)
+    return redirect("/login/")
 
 
 def home(request):
